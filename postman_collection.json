@@ -1,0 +1,69 @@
+{
+    "info": {
+      "name": "Image Processing API",
+      "_postman_id": "12345",
+      "description": "API to upload CSV, check status, and webhook integration.",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Upload CSV",
+        "request": {
+          "method": "POST",
+          "header": [],
+          "body": {
+            "mode": "formdata",
+            "formdata": [
+              {
+                "key": "file",
+                "type": "file",
+                "src": ""
+              }
+            ]
+          },
+          "url": {
+            "raw": "http://localhost:5000/api/images/upload",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "5000",
+            "path": [
+              "api",
+              "images",
+              "upload"
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Check Status",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:5000/api/status/:requestId",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "5000",
+            "path": [
+              "api",
+              "status",
+              ":requestId"
+            ],
+            "variable": [
+              {
+                "key": "requestId",
+                "value": ""
+              }
+            ]
+          }
+        },
+        "response": []
+      }
+    ]
+  }
+  
